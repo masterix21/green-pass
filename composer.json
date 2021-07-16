@@ -1,0 +1,46 @@
+{
+    "name": "masterix21/green-pass",
+    "description": "EU Green Pass",
+    "keywords": [
+        "masterix21",
+        "green-pass"
+    ],
+    "homepage": "https://github.com/masterix21/green-pass",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Luca Longo",
+            "email": "l.longo@ambita.it",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.0",
+        "ext-zlib": "*",
+        "mhauri/base45": "^0.1.1",
+        "nesbot/carbon": "^2.50",
+        "spomky-labs/cbor-php": "^2.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Masterix21\\GreenPass\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Masterix21\\GreenPass\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
