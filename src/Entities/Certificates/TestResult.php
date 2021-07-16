@@ -55,15 +55,15 @@ class TestResult extends CertificateType
      */
     public ?string $centre;
 
-    public function __construct(protected array $data)
+    public function __construct(array $data)
     {
         parent::__construct($data);
 
-        $this->type = $data['t']['tt'] ?? null;
-        $this->name = $data['t']['tm'] ?? null;
-        $this->device = $data['t']['ma'] ?? null;
-        $this->date = ! empty($data['t']['sc']) ? Carbon::parse($data['t']['sc']) : null;
-        $this->result = $data['t']['tr'] ?? null;
-        $this->centre = $data['t']['tc'] ?? null;
+        $this->type = $data['t'][0]['tt'] ?? null;
+        $this->name = $data['t'][0]['tm'] ?? null;
+        $this->device = $data['t'][0]['ma'] ?? null;
+        $this->date = ! empty($data['t'][0]['sc']) ? Carbon::parse($data['t'][0]['sc']) : null;
+        $this->result = $data['t'][0]['tr'] ?? null;
+        $this->centre = $data['t'][0]['tc'] ?? null;
     }
 }

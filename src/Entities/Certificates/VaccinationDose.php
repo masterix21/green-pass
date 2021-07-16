@@ -51,15 +51,15 @@ class VaccinationDose extends CertificateType
      */
     public ?Carbon $date;
 
-    public function __construct(protected array $data)
+    public function __construct(array $data)
     {
         parent::__construct($data);
 
-        $this->type = $data['v']['vp'] ?? null;
-        $this->product = $data['v']['mp'] ?? null;
-        $this->manufacturer = $data['v']['ma'] ?? null;
-        $this->doseGiven = $data['v']['dn'] ?? 0;
-        $this->totalDoses = $data['v']['sd'] ?? 0;
-        $this->date = ! empty($data['v']['dt'] ?? null) ? Carbon::parse($data['v']['dt']) : null;
+        $this->type = $data['v'][0]['vp'] ?? null;
+        $this->product = $data['v'][0]['mp'] ?? null;
+        $this->manufacturer = $data['v'][0]['ma'] ?? null;
+        $this->doseGiven = $data['v'][0]['dn'] ?? 0;
+        $this->totalDoses = $data['v'][0]['sd'] ?? 0;
+        $this->date = ! empty($data['v'][0]['dt'] ?? null) ? Carbon::parse($data['v'][0]['dt']) : null;
     }
 }

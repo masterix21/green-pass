@@ -14,7 +14,7 @@ class Holder
 
     public ?Carbon $dateOfBirth;
 
-    public function __construct(protected array $data)
+    public function __construct(array $data)
     {
         $this->dateOfBirth = ! empty($data['dob'] ?? null) ? Carbon::parse($data['dob']) : null;
 

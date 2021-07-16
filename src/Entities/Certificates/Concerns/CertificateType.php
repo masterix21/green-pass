@@ -33,11 +33,11 @@ abstract class CertificateType
      */
     public ?string $issuer;
 
-    public function __construct(protected array $data)
+    public function __construct(array $data)
     {
-        $this->id = $data['v']['ci'] ?? null;
-        $this->diseaseAgentTargeted = $data['v']['tg'] ?? null;
-        $this->country = $data['v']['co'] ?? null;
-        $this->issuer = $data['v']['is'] ?? null;
+        $this->id = $data['v'][0]['ci'] ?? null;
+        $this->diseaseAgentTargeted = $data['v'][0]['tg'] ?? null;
+        $this->country = $data['v'][0]['co'] ?? null;
+        $this->issuer = $data['v'][0]['is'] ?? null;
     }
 }

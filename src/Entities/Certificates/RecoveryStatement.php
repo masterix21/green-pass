@@ -29,12 +29,12 @@ class RecoveryStatement extends CertificateType
      */
     public ?Carbon $validUntil;
 
-    public function __construct(protected array $data)
+    public function __construct(array $data)
     {
         parent::__construct($data);
 
-        $this->date = ! empty($data['r']['fr']) ? Carbon::parse($data['r']['fr']) : null;
-        $this->validFrom = ! empty($data['r']['df']) ? Carbon::parse($data['r']['df']) : null;
-        $this->validUntil = ! empty($data['r']['du']) ? Carbon::parse($data['r']['du']) : null;
+        $this->date = ! empty($data['r'][0]['fr']) ? Carbon::parse($data['r'][0]['fr']) : null;
+        $this->validFrom = ! empty($data['r'][0]['df']) ? Carbon::parse($data['r'][0]['df']) : null;
+        $this->validUntil = ! empty($data['r'][0]['du']) ? Carbon::parse($data['r'][0]['du']) : null;
     }
 }

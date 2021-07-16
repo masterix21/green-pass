@@ -33,7 +33,7 @@ trait ImplementsDecode
 
         $base45 = new Base45();
 
-        $decodedBase45 = $base45->decode($qrcode);
+        $decodedBase45 = $base45->decode(substr($qrcode, 4));
 
         $decodedZlib = zlib_decode($decodedBase45);
 
@@ -47,13 +47,13 @@ trait ImplementsDecode
             throw new InvalidCborNormalizedData();
         }
 
-        $decodedGreenPassData = $decoder->decode(new StringStream($decodedData[3]))
+        $decodedGreenPassData = $decoder->decode(new StringStream($decodedData[2]))
             ->getNormalizedData();
 
-        if (count($decodedGreenPassData) !== 4) {
+        if (! $decodedGreenPassData || count($decodedGreenPassData) !== 4) {
             throw new InvalidCborNormalizedData();
         }
 
-        return new GreenPass($decodedGreenPassData[-260][1]);
+        return new self($decodedGreenPassData[-260][1]);
     }
 }
