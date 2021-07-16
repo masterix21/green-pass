@@ -1,4 +1,4 @@
-# EU Green Pass PHP library
+# COVID-19 Green Pass PHP Decoder
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/masterix21/green-pass.svg?style=flat-square)](https://packagist.org/packages/masterix21/green-pass)
 [![Total Downloads](https://img.shields.io/packagist/dt/masterix21/green-pass.svg?style=flat-square)](https://packagist.org/packages/masterix21/green-pass)
