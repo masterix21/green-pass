@@ -6,9 +6,9 @@ use CBOR\Decoder;
 use CBOR\OtherObject\OtherObjectManager;
 use CBOR\StringStream;
 use CBOR\Tag\TagObjectManager;
+use Masterix21\GreenPass\Entities\GreenPass;
 use Masterix21\GreenPass\Exceptions\InvalidCborNormalizedData;
 use Masterix21\GreenPass\Exceptions\InvalidQrcode;
-use Masterix21\GreenPass\Entities\GreenPass;
 use Mhauri\Base45;
 
 /** @mixin GreenPass */
