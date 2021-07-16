@@ -21,8 +21,10 @@ composer require masterix21/green-pass
 ## Usage
 
 ```php
-GreenPassManager::decode("HC1:.....");
+GreenPass::decode("HC1:.....");
 ```
+
+![GreenPass object](https://github.com/masterix21/green-pass/blob/master/resources/green-pass-data.png?raw=true)
 
 ### Testing
 
