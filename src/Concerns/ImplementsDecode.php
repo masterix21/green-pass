@@ -27,7 +27,7 @@ trait ImplementsDecode
      */
     public static function decode(string $qrcode)
     {
-        if (substr($qrcode, 0, 4) !== 'HC1:') {
+        if (! static::isFormallyValid($qrcode)) {
             throw new InvalidQrcode();
         }
 
