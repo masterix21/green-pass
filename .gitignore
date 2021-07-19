@@ -1,3 +1,9 @@
 .DS_Store
 .idea
 vendor
+.php-cs-fixer.cache
+.php_cs.cache
+.phpunit.result.cache
+composer.lock
+phpunit.xml
+node_modules
