@@ -23,7 +23,7 @@ composer require masterix21/green-pass
 ## Usage
 
 ```php
-GreenPass::decode("HC1:.....");
+\Masterix21\GreenPass\Services\Decoder::qrcode("HC1:.....");
 ```
 
 ![GreenPass object](https://github.com/masterix21/green-pass/blob/master/resources/green-pass-data.png?raw=true)
