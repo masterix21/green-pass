@@ -27,11 +27,13 @@ class Validator
      */
     public function isValid(Carbon | string | null $date = null): bool
     {
+        /*
         $date ??= Carbon::now();
 
         if (is_string($date)) {
             $date = Carbon::parse($date);
         }
+        */
 
         /**
          * @TODO:

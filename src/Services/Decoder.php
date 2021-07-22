@@ -37,15 +37,13 @@ class Decoder
         }
     }
 
-    public static function cbor($cbor): array
+    public static function cbor($cbor): ?array
     {
         $decoder = new \CBOR\Decoder(new TagObjectManager(), new OtherObjectManager());
 
         $result = $decoder->decode(new StringStream($cbor));
 
-        if (! $result
-            || ! is_object($result)
-            || get_class($result) !== MapObject::class
+        if (get_class($result) !== MapObject::class
             || $result->count() !== 4) {
             throw new InvalidCborData();
         }
@@ -53,15 +51,13 @@ class Decoder
         return $result->getNormalizedData();
     }
 
-    public static function cose($cose): array
+    public static function cose($cose): ?array
     {
         $decoder = new \CBOR\Decoder(new TagObjectManager(), new OtherObjectManager());
 
         $result = $decoder->decode(new StringStream($cose));
 
-        if (! $result
-            || ! is_object($result)
-            || get_class($result) !== GenericTag::class) {
+        if (get_class($result) !== GenericTag::class) {
             throw new InvalidCoseData();
         }
 
