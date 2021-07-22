@@ -1,8 +1,10 @@
 # COVID-19 Green Pass PHP Decoder
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/masterix21/green-pass.svg?style=flat-square)](https://packagist.org/packages/masterix21/green-pass)
-[![Total Downloads](https://img.shields.io/packagist/dt/masterix21/green-pass.svg?style=flat-square)](https://packagist.org/packages/masterix21/green-pass)
-![GitHub Actions](https://github.com/masterix21/green-pass/actions/workflows/main.yml/badge.svg)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/masterix21/green-pass.svg)](https://packagist.org/packages/masterix21/green-pass)
+[![Total Downloads](https://img.shields.io/packagist/dt/masterix21/green-pass.svg)](https://packagist.org/packages/masterix21/green-pass)
+[![Build Status](https://travis-ci.com/masterix21/green-pass.svg?branch=master)](https://travis-ci.com/masterix21/green-pass)
+![psalm](https://github.com/masterix21/green-pass/actions/workflows/psalm.yml/badge.svg?style=flat-square)
+[![codecov](https://codecov.io/gh/masterix21/green-pass/branch/master/graph/badge.svg?token=D7CW847KDA)](https://codecov.io/gh/masterix21/green-pass)
 
 This is a simplier way to decode the Green Pass QR-code in your PHP application. 
 
