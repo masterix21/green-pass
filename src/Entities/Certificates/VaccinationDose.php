@@ -4,6 +4,7 @@ namespace Masterix21\GreenPass\Entities\Certificates;
 
 use Carbon\Carbon;
 use Masterix21\GreenPass\Entities\Certificates\Concerns\CertificateType;
+use Masterix21\GreenPass\Entities\DiseaseAgents\DiseaseAgent;
 
 class VaccinationDose extends CertificateType
 {
@@ -53,7 +54,12 @@ class VaccinationDose extends CertificateType
 
     public function __construct(array $data)
     {
-        parent::__construct($data);
+        $this->id = $data['v'][0]['ci'] ?? null;
+
+        $this->diseaseAgent = DiseaseAgent::resolveById($data['v'][0]['tg']);
+
+        $this->country = $data['v'][0]['co'] ?? null;
+        $this->issuer = $data['v'][0]['is'] ?? null;
 
         $this->type = $data['v'][0]['vp'] ?? null;
         $this->product = $data['v'][0]['mp'] ?? null;

@@ -2,6 +2,6 @@
 
 namespace Masterix21\GreenPass\Exceptions;
 
-class InvalidCborNormalizedData extends \Exception
+class InvalidDiseaseAgent extends \Exception
 {
 }

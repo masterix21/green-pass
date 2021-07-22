@@ -12,9 +12,6 @@ use Masterix21\GreenPass\Entities\Holder;
 
 class GreenPass
 {
-    use ImplementsChecks;
-    use ImplementsDecode;
-
     /**
      * Schema version
      *

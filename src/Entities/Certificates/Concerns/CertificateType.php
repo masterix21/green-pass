@@ -2,6 +2,8 @@
 
 namespace Masterix21\GreenPass\Entities\Certificates\Concerns;
 
+use Masterix21\GreenPass\Entities\DiseaseAgents\DiseaseAgent;
+
 abstract class CertificateType
 {
     /**
@@ -14,9 +16,9 @@ abstract class CertificateType
     /**
      * Disease or agent from which the holder has recovered.
      *
-     * @var string|null
+     * @var DiseaseAgent
      */
-    public ?string $diseaseAgentTargeted;
+    public DiseaseAgent $diseaseAgent;
 
     /**
      * Member State or third country in which the vaccine
@@ -32,12 +34,4 @@ abstract class CertificateType
      * @var string|null
      */
     public ?string $issuer;
-
-    public function __construct(array $data)
-    {
-        $this->id = $data['v'][0]['ci'] ?? null;
-        $this->diseaseAgentTargeted = $data['v'][0]['tg'] ?? null;
-        $this->country = $data['v'][0]['co'] ?? null;
-        $this->issuer = $data['v'][0]['is'] ?? null;
-    }
 }
