@@ -2,7 +2,6 @@
 
 namespace Masterix21\GreenPass\Services;
 
-use CBOR\ListObject;
 use CBOR\MapObject;
 use CBOR\OtherObject\OtherObjectManager;
 use CBOR\StringStream;
@@ -22,6 +21,7 @@ class Decoder
     {
         try {
             $decoder = new Base45();
+
             return $decoder->decode($base45);
         } catch (\Exception $e) {
             throw new InvalidBase45();

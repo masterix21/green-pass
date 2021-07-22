@@ -25,7 +25,7 @@ class Validator
      *
      * @return bool
      */
-    public function isValid(Carbon|string|null $date = null): bool
+    public function isValid(Carbon | string | null $date = null): bool
     {
         $date ??= Carbon::now();
 

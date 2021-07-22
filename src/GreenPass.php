@@ -2,8 +2,6 @@
 
 namespace Masterix21\GreenPass;
 
-use Masterix21\GreenPass\Concerns\ImplementsChecks;
-use Masterix21\GreenPass\Concerns\ImplementsDecode;
 use Masterix21\GreenPass\Entities\Certificates\Concerns\CertificateType;
 use Masterix21\GreenPass\Entities\Certificates\RecoveryStatement;
 use Masterix21\GreenPass\Entities\Certificates\TestResult;
