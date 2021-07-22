@@ -1,5 +1,11 @@
 language: php
 
+php:
+    - 8.0
+
+install:
+    - composer install -n --ignore-platform-reqs --no-suggest
+
 script:
     - vendor/bin/phpunit --coverage-clover coverage.xml
 
