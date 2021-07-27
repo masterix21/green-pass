@@ -6,7 +6,7 @@
 ![psalm](https://github.com/masterix21/green-pass/actions/workflows/psalm.yml/badge.svg?style=flat-square)
 [![codecov](https://codecov.io/gh/masterix21/green-pass/branch/master/graph/badge.svg?token=D7CW847KDA)](https://codecov.io/gh/masterix21/green-pass)
 
-This is a simplier way to decode the Green Pass QR-code in your PHP application. 
+This is a simpler way to decode the Green Pass QR-code in your PHP application.
 
 ## Support us
 
