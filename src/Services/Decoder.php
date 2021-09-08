@@ -2,11 +2,13 @@
 
 namespace Masterix21\GreenPass\Services;
 
+use Carbon\Carbon;
 use CBOR\MapObject;
 use CBOR\OtherObject\OtherObjectManager;
 use CBOR\StringStream;
 use CBOR\Tag\GenericTag;
 use CBOR\Tag\TagObjectManager;
+use Exception;
 use Masterix21\GreenPass\Exceptions\InvalidBase45;
 use Masterix21\GreenPass\Exceptions\InvalidCborData;
 use Masterix21\GreenPass\Exceptions\InvalidCoseData;
@@ -23,7 +25,7 @@ class Decoder
             $decoder = new Base45();
 
             return $decoder->decode($base45);
-        } catch (\Exception $e) {
+        } catch (Exception $e) {
             throw new InvalidBase45();
         }
     }
@@ -32,7 +34,7 @@ class Decoder
     {
         try {
             return zlib_decode($zlib);
-        } catch (\Exception $e) {
+        } catch (Exception) {
             throw new InvalidZlib();
         }
     }
@@ -66,7 +68,7 @@ class Decoder
 
     public static function qrcode(string $qrcode): GreenPass
     {
-        if (! Validator::qrcodePrefix($qrcode)) {
+        if (! Validator::qrcodeHasPrefix($qrcode)) {
             throw new InvalidQrcode();
         }
 

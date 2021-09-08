@@ -49,4 +49,9 @@ class GreenPass
             $this->certificate = new RecoveryStatement($data);
         }
     }
+
+    public function toArray() : array
+    {
+        return $this->data;
+    }
 }
