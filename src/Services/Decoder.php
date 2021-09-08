@@ -2,7 +2,6 @@
 
 namespace Masterix21\GreenPass\Services;
 
-use Carbon\Carbon;
 use CBOR\MapObject;
 use CBOR\OtherObject\OtherObjectManager;
 use CBOR\StringStream;

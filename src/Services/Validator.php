@@ -2,7 +2,6 @@
 
 namespace Masterix21\GreenPass\Services;
 
-use Carbon\Carbon;
 use Exception;
 use Masterix21\GreenPass\GreenPass;
 
@@ -40,6 +39,7 @@ class Validator
 
         try {
             CertLogic::evaluteRules($rules, $greenPass->toArray());
+
             return true;
         } catch (Exception) {
             return false;

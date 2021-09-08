@@ -314,7 +314,7 @@ class CertLogic
         );
     }
 
-    protected static function plusTime(Carbon|string $dateTime, int $amount, string $timeUnit): Carbon
+    protected static function plusTime(Carbon | string $dateTime, int $amount, string $timeUnit): Carbon
     {
         if (is_string($dateTime)) {
             $dateTime = Carbon::parse($dateTime);
