@@ -27,9 +27,10 @@ class Validator
     /**
      * Verify if the green pass is within the validity period.
      *
+     * @param null $date
      * @return bool
      */
-    public function isValid(Carbon | string | null $date = null): bool
+    public function isValid($date = null): bool
     {
         /*
         $date ??= Carbon::now();
