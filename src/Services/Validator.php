@@ -17,6 +17,10 @@ class Validator
      */
     public static function qrcodePrefix(string $qrcode): bool
     {
+        if (!function_exists('str_starts_with')) {
+            return substr( $qrcode, 0, 4 ) === "HC1:";
+        }
+
         return str_starts_with($qrcode, 'HC1:');
     }
 
